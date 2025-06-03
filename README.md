@@ -12,7 +12,7 @@ A FTP client package for Go
 ## Install ##
 
 ```
-go get -u github.com/jlaffaye/ftp
+go get -u github.com/saveblush/ftp
 ```
 
 ## Documentation ##
