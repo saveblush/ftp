@@ -1078,6 +1078,12 @@ func (c *ServerConn) RemoveDir(path string) error {
 	return err
 }
 
+// ChangePermission Set permissions on a file
+func (c *ServerConn) ChangePermission(permissions, path string) error {
+	_, _, err := c.cmd(StatusCommandOK, "SITE CHMOD %s %s", permissions, path)
+	return err
+}
+
 // Walk prepares the internal walk function so that the caller can begin traversing the directory
 func (c *ServerConn) Walk(root string) *Walker {
 	w := new(Walker)
